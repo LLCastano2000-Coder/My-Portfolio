@@ -5,7 +5,7 @@ p { color: #7b7b80; line-height: 1.6; margin-bottom: 2rem; font-family: 'Source 
 li { color: #7b7b80; margin-bottom: 0.5rem; font-family: 'Source Sans 3'; font-size: 1.125rem; }
 a { color: #883dc5; font-family: 'Source Sans 3'; font-size: 1.125rem; }
 section { scroll-margin-top: 100px; }
-.navbar { display: flex; justify-content: space-between;align-items: center; padding: 1rem 2rem; background-color: #00000a; position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: #00000a; position: sticky; top: 0; z-index: 1000; }
 .logoImage { width: 65px; height: 65px; border-radius: 50%; object-fit: cover; }
 .logo { font-size: 1.5rem; font-weight: bold; color: #883dc5; margin-right: 4rem; display: flex; align-items: center; gap: 12px;  }
 .logo a:hover, .logo a:active { color: #eeb48b; }
@@ -15,8 +15,12 @@ section { scroll-margin-top: 100px; }
 .hero { background-image: linear-gradient(rgba(1, 0, 3, 0.637), rgba(0, 0, 27, 0.61)), url('Portfolio background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 5rem 1.25rem; text-align: center; color: #d6d6e2; }
 .hero h1 { color: #9a5ccc; }
 .home-div { border: none; height: 3px; background-color: #883dc5; width: 75%; margin: 40px auto; box-shadow: 0 0 10px #883dc5, 0 0 20px #883dc5;}
-.about-image { filter: brightness(70%) contrast(110%); transition: filter 0.3s ease, box-shadow 0.3s ease; border-radius: 30px; }
+.about-container { display: flex; align-items: center; gap: 20px; }
+.about-text { text-align: left; flex: 1; }
+.about-image { filter: brightness(70%) contrast(110%); transition: filter 0.3s ease, box-shadow 0.3s ease; border-radius: 30px; width: 400px; height: 500px; }
 .about-image:hover { filter: brightness(100%) contrast(100%); }
+@media (max-width: 768px) { .menu-toggle .bi-list { color: #883dc5; font-size: 2rem; }.menu-toggle { display: block; background: none; border: none; color: #883dc5; font-size: 2rem; cursor: pointer; } .nav-links { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #00000a; gap: 1.5rem; padding:  2rem 0; text-align: center; opacity: 0; pointer-events: none; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;} nav-links.active { opacity: 1 !important; pointer-events: auto !important; transform: translateY(0) !important; }.logo,.logoImage { width: 65px; height: 65px; object-fit: cover; flex-shrink: 0; } .about-container { flex-direction: column; text-align: center; } .about-text { text-align: center; } .about-image { width: 100%; max-width: 300px; height: auto; } }
+@media (min-width: 769px) { .menu-toggle, .menu-toggle .bi-list { display: none !important; } }
 .bi-laptop { color: #883dc5; font-size: 5rem; margin-left: 35px; }
 .bi-laptop:hover { color: #eeb48b; }
 .bi-filetype-html { color: #883dc5; font-size:3rem; margin-right: 4px; }
@@ -42,9 +46,6 @@ section { scroll-margin-top: 100px; }
 .project-br { border: none; height: 4px; width: 75%; margin: 50px auto; position: relative; overflow: visible; background-image: repeating-linear-gradient(to right, #ffdf00, #ffdf00 4px, transparent 4px, transparent 12px), repeating-linear-gradient(to right, #ffdf00, #ffdf00 4px, transparent 4px, transparent 12px);  filter: drop-shadow(0 0 3px #ffdf00); background-size: calc(50% - 20px) 100%, calc(50% - 20px) 100%; background-position: left center, right center; background-repeat: no-repeat, no-repeat; }
 .project-br::after{ content: "\2726"; color: #fff6a3; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; line-height: 1; filter: drop-shadow(0 0 8px #ffdf00); animation: cosmicTwinkle 4.5s ease-in-out infinite; }
 @keyframes cosmicTwinkle { 0%, 100% { opacity:1; filter: drop-shadow(0 0 8px #ffdf00) drop-shadow(0 0 12px #ffcc00); transform: translate(-50%, -50%) } 50% { opacity: 0.4; filter: drop-shadow(0 0 2px #ffdf00); transform: translate(-50%, -50%) scale(0.85); } }
-.container { display: flex; align-items: center; gap: 20px; }
-.container img { width: 400px; }
-.text-group { text-align: left; flex: 1; }
 .custom-button { display: inline-block; padding: 12px 24px; background-color: #883dc5; color: #00000a; text-decoration: none; font-family: Outfit; font-size: 16px; font-weight: 600; text-align: center; border-radius: 4px;  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: background-color 0.2s ease, transform 0.1s ease; }
 .custom-button:hover { background-color: #eeb48b; }
 .custom-button:active { transform: scale(0.98); }
